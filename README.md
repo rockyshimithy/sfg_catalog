@@ -1,6 +1,6 @@
 # SFG Catalog
 
-## App para CRUD de Catálogo de Ecommerce - usando python 3.7, aiohttp e mongo
+## App para CRUD de Catálogo - usando python 3.7, aiohttp e mongo
 
 Antes de começar, é necessário a criação e ativação de uma VirtualEnv com Python 3.7, para isso recomendo pyenv.
 Após isso, vá para a pasta raiz desse projeto (sfg_catalog) e siga as instruções abaixo.
