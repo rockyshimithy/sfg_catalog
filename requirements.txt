@@ -1,0 +1,8 @@
+aiohttp==3.5.4
+gunicorn==19.9.0
+uvloop==0.12.1
+motor==2.0.0
+schema==0.7.0
+attrdict==2.0.1
+aiohttp-swagger==1.0.5
+aiohttp_jinja2==1.1.2
