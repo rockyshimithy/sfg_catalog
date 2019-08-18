@@ -93,20 +93,10 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
     {"sku": "666XPT1", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo amarelo", "brand": "Muquiranas", "category": "calcados", "subcategory": "chinelo", "size": "40", "list_price": 99.9, "price": 49.9, "id": "666XPT1-dafiti-buscape"}
     ```
 
-- Deleta um Recurso usando o seu identificador
-
-    ```shell
-    $ curl -X DELETE --header 'Accept: application/octet-stream' 'http://127.0.0.1:8080/resources/666XPTO-dafiti-buscape/'
-    ```
-
-    Response:
-    ```
-    ```
-
  - Retorna um Recurso especifico usando o seu identificador
 
     ```shell
-    $ curl -X GET --header 'Accept: application/json' 'http://127.0.0.1:8080/resources/666XPTO-dafiti-buscape/'
+    $ curl -X GET --header 'Accept: application/json' 'http://127.0.0.1:8080/resources/666XPT1-dafiti-buscape/'
     ```
 
     Response:
@@ -121,7 +111,7 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
     "brand": "pamonha",
     "list_price": 50,
     "price": 25
-    }' 'http://127.0.0.1:8080/resources/666XPTO-dafiti-buscape/'
+    }' 'http://127.0.0.1:8080/resources/666XPT1-dafiti-buscape/'
     ```
 
     Response:
@@ -133,7 +123,7 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
 
     ```shell
     $ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-    "sku": "666XPTO",
+    "sku": "666XPT1",
     "seller": "dafiti",
     "campaign_code": "buscape",
     "product_name": "Chinelo azul",
@@ -143,12 +133,22 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
     "size": "40",
     "list_price": 99.9,
     "price": 49.9
-    }' 'http://127.0.0.1:8080/resources/666XPTO-dafiti-buscape/'
+    }' 'http://127.0.0.1:8080/resources/666XPT1-dafiti-buscape/'
     ```
 
     Response:
     ```
     {"sku": "666XPTO", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo azul", "brand": "hue", "category": "pezinho", "subcategory": "chinelo", "size": "40", "list_price": 99.9, "price": 49.9, "id": "666XPTO-dafiti-buscape"}
+    ```
+
+- Deleta um Recurso usando o seu identificador
+
+    ```shell
+    $ curl -X DELETE --header 'Accept: application/octet-stream' 'http://127.0.0.1:8080/resources/666XPT1-dafiti-buscape/'
+    ```
+
+    Response:
+    ```
     ```
 
 - E por fim, a última rota lista os Recursos. Recomendo acessar no navegador por renderizar `html`:
