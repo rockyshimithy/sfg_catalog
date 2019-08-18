@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        }
+
+        table {
+            display: grid;
+            border-collapse: collapse;
+            min-width: 100%;
+            grid-template-columns:
+                minmax(100px, 1fr)
+                minmax(100px, 1fr)
+                minmax(100px, 1fr)
+                minmax(100px, 1fr)
+                minmax(100px, 1fr)
+                minmax(100px, 1fr)
+                minmax(100px, 1fr)
+                minmax(100px, 1fr)
+                minmax(100px, 1fr)
+                minmax(100px, 1fr);
+        }
+
+        thead,
+        tbody,
+        tr {
+            display: contents;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background: #990000;
+            text-align: left;
+            font-weight: normal;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        th:last-child {
+            border: 0;
+        }
+
+        td {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: #808080;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8f6ff;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Listagem de Recursos</title>
+    </head>
+    <body>
+        <div>
+            <table>
+                {% if resources %}
+                <thead>
+                    <tr>
+                        <th>Sku</th>
+                        <th>Seller</th>
+                        <th>Campaign Code</th>
+                        <th>Product Name</th>
+                        <th>Brand</th>
+                        <th>Category</th>
+                        <th>Subcategory</th>
+                        <th>Size</th>
+                        <th>List Price</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for resource in resources %}
+                    <tr>
+                        <td>
+                            <p><strong>{{ resource.sku }}</strong></p>
+                        </td>
+                        <td>
+                            <p>{{ resource.seller }}</p>
+                        </td>
+                        <td>
+                            <p>{{ resource.campaign_code }}</p>
+                        </td>
+                        <td>
+                            <p>{{ resource.product_name }}</p>
+                        </td>
+                        <td>
+                            <p>{{ resource.brand }}</p>
+                        </td>
+                        <td>
+                            <p>{{ resource.category }}</p>
+                        </td>
+                        <td>
+                            <p>{{ resource.subcategory }}</p>
+                        </td>
+                        <td>
+                            <p>{{ resource.size }}</p>
+                        </td>
+                        <td>
+                            <p>{{ resource.list_price }}</p>
+                        </td>
+                        <td>
+                            <p>{{ resource.price }}</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                {% else %}
+                    <div><p>There are no resources to display</p></div>
+                {% endif %}
+            </table>
+        </div>
+    </body>
+</html>
