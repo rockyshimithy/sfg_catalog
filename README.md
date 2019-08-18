@@ -101,7 +101,7 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
 
     Response:
     ```
-    {"sku": "666XPTO", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo amarelo", "brand": "Muquiranas", "category": "calcados", "subcategory": "chinelo", "size": "40", "list_price": 99.9, "price": 49.9, "id": "666XPTO-dafiti-buscape"}
+    {"sku": "666XPT1", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo amarelo", "brand": "Muquiranas", "category": "calcados", "subcategory": "chinelo", "size": "40", "list_price": 99.9, "price": 49.9, "id": "666XPT1-dafiti-buscape"}
     ```
 
 - Altera as propriedades de um Recurso já cadastrado usando PATCH, exceto o `id`, `sku`, `seller` e `campaign_code`. Não é necessário passar todo `payload`.
@@ -116,7 +116,7 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
 
     Response:
     ```
-    {"sku": "666XPTO", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo amarelo", "brand": "pamonha", "category": "calcados", "subcategory": "chinelo", "size": "40", "list_price": 50, "price": 25, "id": "666XPTO-dafiti-buscape"}
+    {"sku": "666XPT1", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo amarelo", "brand": "pamonha", "category": "calcados", "subcategory": "chinelo", "size": "40", "list_price": 50, "price": 25, "id": "666XPT1-dafiti-buscape"}
     ```
 
 - Altera os campos de um Recurso já cadastrado usando PUT, exceto o `id`, `sku`, `seller` e `campaign_code`. É necessário passar todo o `payload`.
@@ -138,7 +138,7 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
 
     Response:
     ```
-    {"sku": "666XPTO", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo azul", "brand": "hue", "category": "pezinho", "subcategory": "chinelo", "size": "40", "list_price": 99.9, "price": 49.9, "id": "666XPTO-dafiti-buscape"}
+    {"sku": "666XPT1", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo azul", "brand": "hue", "category": "pezinho", "subcategory": "chinelo", "size": "40", "list_price": 99.9, "price": 49.9, "id": "666XPT1-dafiti-buscape"}
     ```
 
 - Deleta um Recurso usando o seu identificador
