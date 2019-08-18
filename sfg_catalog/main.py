@@ -4,6 +4,7 @@ import jinja2
 from aiohttp import web
 from aiohttp_swagger import setup_swagger
 
+from .resources.routes import resources_routes
 from .settings import LOGGING, TEMPLATES_DIR
 
 
@@ -29,7 +30,7 @@ def setup_logging():
 
 
 def register_routes(app):
-    pass
+    resources_routes(app)
 
 
 def get_middlewares():
