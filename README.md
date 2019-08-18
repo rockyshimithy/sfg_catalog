@@ -26,6 +26,12 @@ NOTA: Uma alternativa ao curl é o Swagger para interagir com a API via browser.
 
 Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sku`, `seller` e `campaign_code`, e estes não são campos editáveis.
 
+- Realiza upload de um arquivo csv com os Recursos a serem criados ou atualizados. (obs.: Importante definir o caminho do arquivo corretamente e respeitar a estrutura do arquivo exemplo no projeto)
+
+    ```shell
+    $ curl -F 'csv_file=@resources.csv' --header 'Content-Type: multipart/form-data' --header 'Accept: application/octet-stream' 'http://127.0.0.1:8080/resources/csv_import/'
+    ```
+
 - Retorna todos os Recursos
 
     ```shell
@@ -143,12 +149,6 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
     Response:
     ```
     {"sku": "666XPTO", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo azul", "brand": "hue", "category": "pezinho", "subcategory": "chinelo", "size": "40", "list_price": 99.9, "price": 49.9, "id": "666XPTO-dafiti-buscape"}
-    ```
-
-- Realiza upload de um arquivo csv com os Recursos a serem criados ou atualizados. (obs.: Importante definir o caminho do arquivo corretamente e respeitar a estrutura do arquivo exemplo no projeto)
-
-    ```shell
-    $ curl -F 'csv_file=@resources.csv' --header 'Content-Type: multipart/form-data' --header 'Accept: application/octet-stream' 'http://127.0.0.1:8080/resources/csv_import/'
     ```
 
 - E por fim, a última rota lista os Recursos. Recomendo acessar no navegador por renderizar `html`:
