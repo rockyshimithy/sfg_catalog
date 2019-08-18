@@ -1,0 +1,219 @@
+swagger: "2.0"
+info:
+  description: SFG Catalog is the RESTful Catalog API for some fashion group
+  version: "1.0.0"
+  title: SFG Catalog
+basePath: /
+schemes:
+  - http
+  - https
+paths:
+  /resources/:
+    get:
+      tags:
+        - resources
+      summary: Retrieve resources
+      description: Retrieve resources, can use filters and pagination
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: "query"
+          name: "page"
+          required: false
+          type: string
+        - in: "query"
+          name: "limit"
+          required: false
+          type: string
+      responses:
+        "200":
+          description: success
+    post:
+      tags:
+        - resources
+      summary: Create resource
+      description: Create resource given a payload
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "payload"
+          required: true
+          schema:
+            $ref: "#/definitions/Resource"
+      responses:
+        "201":
+          description: created
+        "400":
+          description: bad request
+        "409":
+          description: conflict
+  /resources/{id}/:
+    get:
+      tags:
+        - resources
+      summary: Retrieve a resource
+      description: Retrieve a resource given your id
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: "path"
+          name: "id"
+          required: true
+          type: string
+          description: Identifier of the resource
+      responses:
+        "200":
+          description: success
+        "404":
+          description: not found
+    put:
+      tags:
+        - resources
+      summary: Update a resource
+      description: Update a resource given your id and payload
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: "path"
+          name: "id"
+          required: true
+          type: string
+          description: Identifier of the resource
+        - in: "body"
+          name: "body"
+          description: "payload"
+          required: true
+          schema:
+            $ref: "#/definitions/Resource"
+      responses:
+        "200":
+          description: success
+        "400":
+          description: bad request
+        "404":
+          description: not found
+    patch:
+      tags:
+        - resources
+      summary: Update a resource
+      description: Update a resource given your id and partially payload
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: "path"
+          name: "id"
+          required: true
+          type: string
+          description: Identifier of the resource
+        - in: "body"
+          name: "body"
+          description: "payload"
+          required: true
+          schema:
+            $ref: "#/definitions/Resource"
+      responses:
+        "200":
+          description: success
+        "400":
+          description: bad request
+        "404":
+          description: not found
+    delete:
+      tags:
+        - resources
+      summary: Delete a resource
+      description: Delete a resource given your id
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: "path"
+          name: "id"
+          required: true
+          type: string
+          description: Identifier of the resource
+      responses:
+        "204":
+          description: no content
+        "404":
+          description: not found
+  /resources/csv_import/:
+    post:
+      tags:
+        - resources
+      summary: Create or update resources in bulk
+      description: Create or update resources given a csv file
+      consumes:
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: csv_file
+          type: file
+          description: The csv file to upload.
+      responses:
+        "204":
+          description: no content
+        "207":
+          description: multi-status
+        "400":
+          description: bad request
+definitions:
+  Resource:
+    type: object
+    required:
+      - sku
+      - seller
+      - campaign_code
+      - product_name
+      - brand
+      - category
+      - subcategory
+      - size
+      - list_price
+      - price
+    properties:
+      sku:
+        type: string
+        example: "666XPTO"
+      seller:
+        type: string
+        example: "dafiti"
+      campaign_code:
+        type: string
+        example: "buscape"
+      product_name:
+        type: string
+        example: "Chinelo amarelo"
+      brand:
+        type: string
+        example: "Muquiranas"
+      category:
+        type: string
+        example: "calcados"
+      subcategory:
+        type: string
+        example: "chinelo"
+      size:
+        type: string
+        example: "40"
+      list_price:
+        type: number
+        example: 99.9
+      price:
+        type: number
+        example: 49.9
