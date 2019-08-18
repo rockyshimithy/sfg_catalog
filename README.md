@@ -11,9 +11,10 @@ Após isso, vá para a pasta raiz desse projeto (sfg_catalog) e siga as instruç
     $ make requirements
     ```
 
-2) Suba a aplicação
+2) Suba os containers e em seguida a aplicação
 
     ```shell
+    $ make containers
     $ make run
     ```
 

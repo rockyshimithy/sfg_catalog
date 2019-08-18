@@ -12,6 +12,7 @@ help:
 	@echo '    make coverage                               Run tests coverage                '
 	@echo '    make lint                                   Check pep8 and imports            '
 	@echo '    make run                                    Run the application               '
+	@echo '    make containers                             Run container with mongo          '
 	@echo '                                                                                  '
 
 
@@ -48,3 +49,5 @@ lint:
 run:
 	gunicorn sfg_catalog:app --bind localhost:8080 --worker-class aiohttp.worker.GunicornUVLoopWebWorker  --timeout=600
 
+containers:
+	docker-compose up -d
