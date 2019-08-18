@@ -8,7 +8,7 @@ help:
 	@echo '    make requirements                           Install required packages         '
 	@echo '    make requirements_dev                       Install required packages to Dev  '
 	@echo '    make test                                   Run unit tests                    '
-	@echo '    make test-matching Q=<Test target>          Run specific unit tests           '
+	@echo '    make test-matching Q=<Target Test>          Run specific unit tests           '
 	@echo '    make coverage                               Run tests coverage                '
 	@echo '    make lint                                   Check pep8 and imports            '
 	@echo '    make run                                    Run the application               '

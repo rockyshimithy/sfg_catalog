@@ -67,7 +67,7 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
 - Cria um novo Recurso
 
     ```shell
-    curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
+    $ curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
     "sku": "666XPT1",
     "seller": "dafiti",
     "campaign_code": "buscape",
@@ -122,7 +122,7 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
     {"sku": "666XPTO", "seller": "dafiti", "campaign_code": "buscape", "product_name": "Chinelo amarelo", "brand": "pamonha", "category": "calcados", "subcategory": "chinelo", "size": "40", "list_price": 50, "price": 25, "id": "666XPTO-dafiti-buscape"}
     ```
 
-- Altera os campos de um Funcionário já cadastrado usando PUT, exceto o `id`, `sku`, `seller` e `campaign_code`. É necessário passar todo o `payload`.
+- Altera os campos de um Recurso já cadastrado usando PUT, exceto o `id`, `sku`, `seller` e `campaign_code`. É necessário passar todo o `payload`.
 
     ```shell
     $ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
@@ -147,10 +147,10 @@ Os identificadores (ids) dos recursos são gerados pelo `server` com base no `sk
 - Realiza upload de um arquivo csv com os Recursos a serem criados ou atualizados. (obs.: Importante definir o caminho do arquivo corretamente e respeitar a estrutura do arquivo exemplo no projeto)
 
     ```shell
-    curl -F 'csv_file=@resources.csv' --header 'Content-Type: multipart/form-data' --header 'Accept: application/octet-stream' 'http://127.0.0.1:8080/resources/csv_import/'
+    $ curl -F 'csv_file=@resources.csv' --header 'Content-Type: multipart/form-data' --header 'Accept: application/octet-stream' 'http://127.0.0.1:8080/resources/csv_import/'
     ```
 
-- E por fim, a última rota, recomendo acessar no navegador por renderizar `html`:
+- E por fim, a última rota lista os Recursos. Recomendo acessar no navegador por renderizar `html`:
     `http://127.0.0.1:8080/resources/list/`
 
 # Para observar os testes, rode os seguintes comandos
