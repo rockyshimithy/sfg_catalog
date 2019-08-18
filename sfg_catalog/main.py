@@ -1,9 +1,11 @@
 import logging
 
+import aiohttp_jinja2
 import jinja2
 from aiohttp import web
 from aiohttp_swagger import setup_swagger
 
+from .common.mongo import Mongo
 from .resources.routes import resources_routes
 from .settings import LOGGING, TEMPLATES_DIR
 
@@ -12,6 +14,7 @@ def build_app(loop=None):
     app = web.Application(loop=loop, middlewares=get_middlewares())
     app.on_startup.append(load_plugins)
     app.on_cleanup.append(cleanup_plugins)
+    aiohttp_jinja2.setup(app, loader=jinja2.FileSystemLoader(TEMPLATES_DIR))
     register_routes(app)
 
     setup_swagger(
@@ -38,8 +41,10 @@ def get_middlewares():
 
 
 async def load_plugins(app):
-    pass
+    app.mongo = Mongo()
+    app.mongo.initialize(app._loop)
 
 
 async def cleanup_plugins(app):
-    pass
+    if app.mongo:
+        app.mongo.close()
