@@ -6,6 +6,7 @@ from aiohttp import web
 from aiohttp_swagger import setup_swagger
 
 from .common.mongo import Mongo
+from .middlewares import error_middleware
 from .resources.routes import resources_routes
 from .settings import LOGGING, TEMPLATES_DIR
 
@@ -37,7 +38,7 @@ def register_routes(app):
 
 
 def get_middlewares():
-    return []
+    return [error_middleware]
 
 
 async def load_plugins(app):
