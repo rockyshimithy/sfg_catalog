@@ -1,0 +1,25 @@
+sku,seller,campaign_code,product_name,brand,category,subcategory,size,list_price,price
+1111,dafiti,buscape,Cinto couro com fivela de metal,bananas de pijama,acessorios,cinto,único,99.9,20.00
+1111,tricae,buscape,Cinto couro com fivela de metal,bananas de pijama,acessorios,cinto,único,99.9,20.00
+1111,kanui,buscape,Cinto couro com fivela de metal,bananas de pijama,acessorios,cinto,único,99.9,20.00
+2222,dafiti,home_site,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,P,65.50,15.50
+2222,tricae,home_site,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,P,65.50,15.50
+2222,kanui,home_site,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,P,65.50,15.50
+3333,dafiti,email_marketing,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,M,65.50,15.50
+3333,tricae,email_marketing,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,M,65.50,15.50
+3333,kanui,email_marketing,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,M,65.50,15.50
+4444,dafiti,zoom,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,G,65.50,15.50
+4444,tricae,zoom,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,G,65.50,15.50
+4444,kanui,zoom,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,G,65.50,15.50
+5555,dafiti,buscape,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,G,65.50,15.50
+5555,tricae,buscape,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,G,65.50,15.50
+5555,kanui,buscape,Cueca de bolinhas,Xuxa só para encapetadinhos,roupas,cueca,G,65.50,15.50
+6666,dafiti,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,P,299.99,55.99
+6666,tricae,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,P,299.99,55.99
+6666,kanui,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,P,299.99,55.99
+7777,dafiti,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,M,299.99,55.99
+7777,tricae,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,M,299.99,55.99
+7777,kanui,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,M,299.99,55.99
+8888,dafiti,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,G,299.99,55.99
+8888,tricae,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,G,299.99,55.99
+8888,kanui,google_shopping,Jaqueta couro que não é couro,Nice,roupas,jaqueta,G,299.99,55.99
