@@ -1,10 +1,6 @@
-import logging
-
 from schema import And, Optional, Schema, Use
 
 from sfg_catalog.common.models import BaseModel
-
-log = logging.getLogger(__name__)
 
 
 class ResourceModel(BaseModel):

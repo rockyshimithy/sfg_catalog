@@ -1,5 +1,4 @@
 import asyncio
-import logging
 from collections import namedtuple
 from json import JSONDecodeError
 
@@ -13,8 +12,6 @@ from sfg_catalog.common.base import BaseView
 
 from .helpers import generate_resource_id
 from .models import ResourceModel
-
-log = logging.getLogger(__name__)
 
 
 class ListResourcesView(BaseView):
